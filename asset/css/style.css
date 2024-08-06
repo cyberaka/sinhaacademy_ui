@@ -153,8 +153,18 @@ h1.txt_outer{
   border-radius: 16px;
 }
 
-.learning_chart h2{
+.learning_chart h2,.ballon h2{
   border-bottom: 1px solid #3B2FC3;
+  position: relative;
+}
+
+.learning_chart h2::before{
+  content: '\f105';
+  position: absolute;
+  right: 0;
+  top: 17px;
+  font-family: 'FontAwesome';
+  font-size: 42px;
 }
 
 .c1{
@@ -205,13 +215,65 @@ h1.txt_outer{
   color: #19A9B2;
 }
 
+.s1{
+  color: #6E7614;
+}
+
+.s2{
+  color: #702E19;
+}
 
 .learning_box h4{
     font-family: 'ams_barakhadi_1regular';
-    font-size: 39px;
+    font-size: 41px;
     font-weight: 400;
     text-shadow: 3.81px 5.81px 0px #00000024;
     letter-spacing: 0px;
+}
+
+/*---------- 3rd------------*/
+
+.swar img{
+  margin-top: -50px;
+  width: 56px !important;
+}
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+  font-family: 'Arial'
+}
+
+.ballon input[type=checkbox] {
+  /* display: none; */
+  visibility: hidden;
+}
+
+.ballon input[type=checkbox] + label:before {
+  content: "";
+  border: 0.1em solid #fff;
+  display: inline-block;
+  width: 128px;
+  height: 155px;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  transition: .2s;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.ballon input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+.ballon input[type=checkbox]:checked + label:before {
+  background-color: #ED820A;
+  border-color: #ED820A;
+  color: #fff;
 }
 
 /*---------- Your Feedback ------------*/
@@ -430,6 +492,9 @@ img.left_ten_boy {
 .navbar-expand-lg .navbar-nav .nav-link{
   padding-right: 0 !important;
 }
+.learning_box h4{
+  font-size: 32px;
+}
 }
 
 @media(max-width:767px) {
@@ -454,6 +519,9 @@ img.left_ten_boy {
   img.left_ten_boy {
     top: -160px !important;
     width: 130px !important;
+  }
+  h1.txt_outer{
+    font-size: 63px;
   }
 }
 
@@ -507,6 +575,10 @@ img.center_girl{
 }
 .your_feedback .container{
   margin-top: 0rem !important;
+}
+h1.txt_outer{
+  -webkit-text-stroke: 3px #fff;
+  font-size: 43px;
 }
 }
 
