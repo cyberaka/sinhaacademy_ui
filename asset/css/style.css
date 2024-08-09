@@ -294,6 +294,17 @@ h1.txt_outer,.learning_hindi_lang h2,.our_curriculum_content h2,.why_choose_cont
 
 .learning_box{
   border-radius: 16px;
+  border: 2px solid white;
+}
+
+.learning_box:hover {
+  background-color: transparent !important;
+  transition: 0.8s all;
+  cursor: pointer;
+}
+
+.learning_box:hover h4{
+  color: white;
 }
 
 .learning_chart h2,.ballon h2{
@@ -433,6 +444,15 @@ h1.txt_outer,.learning_hindi_lang h2,.our_curriculum_content h2,.why_choose_cont
   font-family: 'ams_barakhadi_1regular';
   padding: 20px 50px 4px 50px;
   line-height: 49.16px;
+  color: #043A8B;
+  border: 2px solid #043A8B;
+}
+
+.chita_btn:hover{
+  color: white;
+  background-color: transparent !important;
+  border-color: white !important;
+  transition: 0.5s all;
 }
 
 .leopard_btn{
@@ -443,6 +463,13 @@ h1.txt_outer,.learning_hindi_lang h2,.our_curriculum_content h2,.why_choose_cont
   padding: 10px 50px 10px 50px;
   line-height: 49.16px;
   background-color: #D50066;
+  border: 2px solid #D50066;
+}
+
+.leopard_btn:hover{
+  background-color: transparent !important;
+  color: #D50066 !important;
+  transition: 0.5s all;
 }
 
 .e_matra_btn li{
