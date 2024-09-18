@@ -10,6 +10,7 @@ import styles from '@/styles/Components/Container/Learning.module.scss';
 import Svar from '../Svar/Index';
 import Vyanjan from '../Vyanjan/Index';
 import AaMatra from '../AaMatra/Index';
+import Ematra from '../Ematra/Index';
 
 const RightBall = '/assets/images/right_ball_boy.png';
 const centerGirl = '/assets/images/center_girl.png';
@@ -56,6 +57,13 @@ function Index() {
       viewAaMatraModal: true,
       edit: false,
       modalTitle: 'Aa Matra',
+    });
+  };
+  const openEmatraModal = () => {
+    dispatch({
+      viewEmatraModal: true,
+      edit: false,
+      modalTitle: 'E Matra',
     });
   };
 
@@ -122,7 +130,7 @@ function Index() {
                         </div>
                       </div>
                       <div className={styles.WordBox}>
-                        <div className={styles.learningBox}>
+                        <div className={styles.learningBox}  onClick={() => openEmatraModal()}>
                           <a href="#">
                             <img src={W2} alt="q maaPaa" />
                           </a>
@@ -302,6 +310,14 @@ function Index() {
         onClose={() => closeModal('viewAaMatraModal')}
       >
         <AaMatra />
+      </SimpleModal>
+      <SimpleModal
+        id={'Ematra' + '_modal'}
+        title={state?.modalTitle}
+        show={state.viewEmatraModal}
+        onClose={() => closeModal('viewEmatraModal')}
+      >
+        <Ematra />
       </SimpleModal>
     </>
   );
